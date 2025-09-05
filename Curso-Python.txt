@@ -1,0 +1,26 @@
+    FRAMEWORKS
+
+Django = robusto e bateria incluída, ideal para aplicações completas
+
+Flask = minimalista e flexível, ótimo para APIs e microsserviços
+
+FastAPI = moderno e rápido, ideal para APIs REST com performance alta.
+
+   AMBIENTE VIRTUAL
+
+com o venv o projeto pode ter sua própria versão da biblioteca sem conflitos.
+
+COMO CRIAR O AMBIENTE VIRTUAL
+
+comando no terminal:python -m venv venv
+
+Ativar o ambiente virtual:
+
+entra no windows prompt -> .\venv\Scripts\activate
+
+Exportar pacotes instalados: pip freeze > requirements.txt
+
+Instalar pacotes a partir de um arquivo requirements.txt: pip install -r requirements.txt
+
+O QUE FAZER NO GITGNORE
+ é usado para dizer ao Git quais arquivos ou pastas não devem ser rastreados/versionados
