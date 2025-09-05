@@ -1,6 +1,6 @@
 print("Olá, Curso de Python!!")
 
-a = 20
+a = 10
 b=18
 soma = a / b
 
