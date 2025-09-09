@@ -10,6 +10,8 @@ FastAPI = moderno e rápido, ideal para APIs REST com performance alta.
 
 com o venv o projeto pode ter sua própria versão da biblioteca sem conflitos.
 
+/////////////////////////////////////////////////////////////////////////////////////////
+
 COMO CRIAR O AMBIENTE VIRTUAL
 
 comando no terminal:python -m venv venv
@@ -22,5 +24,59 @@ Exportar pacotes instalados: pip freeze > requirements.txt
 
 Instalar pacotes a partir de um arquivo requirements.txt: pip install -r requirements.txt
 
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
 O QUE FAZER NO GITGNORE
- é usado para dizer ao Git quais arquivos ou pastas não devem ser rastreados/versionados
+
+  é usado para dizer ao Git quais arquivos ou pastas não devem ser rastreados/versionados
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+  BRAINSTORM
+    Levantamento de ideias.
+
+    ETAPAS
+        - Definir um objetivo.
+        - Reunião do grupo (diferentes pessoas na conversa).
+        - Geração de ideias(Depois de um determinado tempo para pensar).
+        - Registro de ideias.
+        - Encorajar ideias fora do comum.
+        - Seleção das melhores ideias.
+        - E trabalhar nelas para torna-las mais sólidas.
+
+
+QUANDO USAR O BRAINSTORM?
+
+    No início do projeto.
+    Quando há pouca clareza sobre o sistema precisa fazer.
+
+VANTAGENS
+
+    Estimula a criatividade e o pensamento.
+    Gera um volume de ideias em pouco tempo.
+
+DESVANTAGENS
+
+    Pode gerar ideias irrelevantes.
+    Pode virar uma conversa desorganizada.
+    Pessoas mais tímidas podem ter dificuldades de participar.
+    Não substitui técnicas mais estruturadas.
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+ENTREVISTAS
+
+    Não foque só em funcionalidades: descubra o contexto, fluxo de trabalho, limitações, integrações.
+    Evite linguagem técnica, se o entrevistado não for da área.
+    Registrar com cuidado: anote de forma estruturada.
+
+
+    Moldar em cima do cliente o que ele precisa.
+   
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+PROTOTIPAGEM
+
+    Protótipo para ter um feedback do cliente sobre o sistema.
+    Criação de telas, para evitar retrabalho futuro.
