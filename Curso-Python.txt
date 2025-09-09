@@ -80,3 +80,42 @@ PROTOTIPAGEM
 
     Protótipo para ter um feedback do cliente sobre o sistema.
     Criação de telas, para evitar retrabalho futuro.
+
+
+ETNOGRAFIA
+
+    Observador participante
+    - Entender o contexto de uso do sistema com mais profundidade.
+    - Captar comportamentos, hábitos e interações que os usuário muita das vezes não percebe.
+    - Identificar necessidades não expressa verbalmente.
+
+Exemplo prático   
+    - Invés de ter respostas genéricas, eles anotam prescrições em papéis por falta de tempo.
+    - Precisam acessar rapidamente históricos de pacientes em situações críticas.
+
+Vantagens
+
+    - Alta fidelidade das informações coletadas.
+    - Revela gargalos e ineficiências que os próprios usuários podem não perceber.
+
+Desvantagens
+
+    - Pode ser demorada.
+    - Pode ser evasiva.
+    - Requer habilidade de analise e interpretação.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+WORKSHOP
+
+  - Se baseia na dinâmica de grupo.
+  - Levantar e validar requisitos do sistema.
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+METODOLOGIAS
+
+Cascata
+  - Abordagem linear e sequencial.
+  - 
+  
+    
