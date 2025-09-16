@@ -116,6 +116,17 @@ METODOLOGIAS
 
 Cascata
   - Abordagem linear e sequencial.
-  - 
   
+
+////////////////////////////////////////////////////////////////////////////////////
+
+LISTAS - TUPLAS - CONJUNTOS - DICIONÁRIOS
+
+    Listas: armazenar mais de um valor na variável.
+        Indexada: cada item tem um índice.
+        Permite dados diferentes: uma mesma listas pode conter numeros, strings, outras listas, booleanos, etc
+        Delimitada por []
+
+        ex: L = [20, "Giovani", 35.7, [30, 40, 60] ]
+        
     
