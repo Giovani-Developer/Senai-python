@@ -1,14 +1,19 @@
+lista_compras = []
 
+while True:
+    item = input("digite um item para adicionar a lista ou ('sair' ) para finalizar:  ")
 
-for i in range(1,10):
-    user = str(input("Quais itens voce deseja?"))
-    if user == ("sair"):
+    if item.lower() == "sair": # transforma todo o conteudo em minuscula
         break
 
+    lista_compras.append(item) # .append adiciona um valor no array
 
-listas_compras = []
-response = listas_compras
+print("\nSua lista de compras:")
 
-print(response)
+lista_ordenada = sorted(lista_compras)
+for i, produto in enumerate(lista_compras):
+  
+    print(f"{i}. {produto}")
+
 
 

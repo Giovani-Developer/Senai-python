@@ -67,6 +67,7 @@
 # lista.remove(2)
 # print(lista)
 
-listas = [2, 5, 4, 2, 5, 6,]
-listas.sort()
-print(listas)
+# listas = [2, 5, 4, 2, 5, 6,]
+# listas.sort()
+# print(listas)
+
