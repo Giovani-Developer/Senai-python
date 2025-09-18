@@ -52,17 +52,30 @@
 
 # exercicio 4
 
-user = input("Digite sua frase: ")
+# user = input("Digite sua frase: ")
 
-frase = user.split()
+# frase = user.split()
 
-unicas = []
+# unicas = []
 
-for palavra in frase:
-    if palavra not in unicas:
-        unicas.append(palavra)
+# for palavra in frase:
+#     if palavra not in unicas: # se a palavra nao estiver no array unicas.
+#         unicas.append(palavra)  # ele adiciona ao array unicas pelo .append()
 
-print("Palavras unicas:")
-for palavra in unicas:
-    print(palavra)
+# print("\nPalavras unicas:")
+# for palavra in unicas: # o for percorre a frase e verifica se palavra esta dentro de unicas
+#     print(palavra)
+
+####################################################################################
+
+# exercicio 5
+
+# pergunta = input("Digite uma palavra: ") # cria uma variavel para a pergunta ao usuario
+
+# if len(set(pergunta)) == len(pergunta): # o set transforma a pergunta em um conjunto / a função len me retorna numero de itens num objeto
+#     print("Todos os caracteres são diferentes")
+# else:
+#     print("A palavra tem caracteres iguais")
+
+ ##############################################################################################################
 

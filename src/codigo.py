@@ -1,7 +1,7 @@
 lista_compras = []
 
 while True:
-    item = input("digite um item para adicionar a lista ou ('sair' ) para finalizar:  ")
+    item = input("digite um item para adicionar a lista ou ('sair') para finalizar: ")
 
     if item.lower() == "sair": # transforma todo o conteudo em minuscula
         break
