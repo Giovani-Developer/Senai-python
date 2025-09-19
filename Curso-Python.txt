@@ -129,4 +129,13 @@ LISTAS - TUPLAS - CONJUNTOS - DICIONÁRIOS
 
         ex: L = [20, "Giovani", 35.7, [30, 40, 60] ]
         
+####################################################################################################################
+
+Classes - conceitos
+
+Classes = Modelo para criar objetos
+
+Objeto = instância da Classe
+
+Atributo = 
     

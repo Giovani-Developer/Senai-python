@@ -31,7 +31,7 @@
 
 # frase = " O rato roeu a roupa do rei de Roma e a Rainha de raiva roeu o resto"
 # print(frase)
-# minuscula = frase.lower()
+# minuscula = frase.lower() # transforma toda a string em minuscula
 # palavras = minuscula.split() # o .split() ele separa a string em varias partes por palavra
 
 # print(palavras)
@@ -48,16 +48,16 @@
 ########################################################################################################################
 # Exercício 4
 
-agenda = {
-    "Giovani":["19-999295741" , "19-999295742"],
-    "Simone": ["19-997873739" , "19-997873749"]
-}
+# agenda = {
+#     "Giovani":["19-999295741" , "19-999295742"],
+#     "Simone": ["19-997873739" , "19-997873749"]
+# }
 
-print(f"Os números dos contatos são: {agenda}")
+# print(f"Os números dos contatos são: {agenda}")
 
-for nome, telefone in agenda.items():
-    print(f"\n Contato: {nome}")
-    for telefone in telefone:
-        print(f" - Telefone: {telefone}")
+# for nome, telefone in agenda.items():
+#     print(f"\n Contato: {nome}")
+#     for telefone in telefone:
+#         print(f" - Telefone: {telefone}")
 
 #########################################################################################################################
