@@ -17,11 +17,11 @@ VERMELHO = (200, 0, 0)
 AZUL = (0, 0, 200)
 
 #jogador
-player_tam = 100
+player_tam = 80
 player_vel = 1
 
 #inimigo
-enemy_tam = 100
+enemy_tam = 150
 enemy_vel = 1
 
 
@@ -65,10 +65,10 @@ def game_over_screen(pontos):
 
 def jogo():
     player_x = LARGURA // 2 - player_tam // 2
-    player_y = LARGURA - player_tam - 10
+    player_y = LARGURA - player_tam - 5
 
     enemy_x = random.randint(0, LARGURA - enemy_tam )
-    enemy_y = -enemy_tam
+    enemy_y = -enemy_tam  
 
     pontos = 0
 
