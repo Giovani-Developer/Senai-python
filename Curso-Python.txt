@@ -139,3 +139,19 @@ Objeto = instância da Classe
 
 Atributo = 
     
+///////////////////////////////////////////////////////////////////
+
+POO -  modela o mundo real em objetos em que as classes sao os modelos, dps de criar uma classe deve instanciar.
+
+ex: classe: Carro. 
+    atributo: tem 4 rodas.
+    metodo: correr.
+
+Encapsulamento = é como guardar os dados numa caixinha, e controlar como podem ser usados.
+    metodos usados: Getter e Setter
+
+Herança = quando uma classe herda de outra classe, a classe filha ganha atributos e metodos da classe pai 
+    ex: Classe Animal(tem nome e idade)
+        Classes filhas: Cachorro e gato.
+
+Encapsulamento (com getters e setters)

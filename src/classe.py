@@ -24,27 +24,167 @@
 # pessoa1.apresentar()
         
 
-class conta_bancaria:
-    def __init__(self, titular):
-        self.titular = titular
-        self.saldo = 0
+# class conta_bancaria:
+#     def __init__(self, titular):
+#         self.titular = titular
+#         self.saldo = 0
         
-    def depositar(self, valor):
-        self.saldo += valor
-        print(f"Depósito de R${valor: .2f} realizado! Saldo atual: R${self.saldo: .2f}")
+#     def depositar(self, valor):
+#         self.saldo += valor
+#         print(f"Depósito de R${valor: .2f} realizado! Saldo atual: R${self.saldo: .2f}")
     
-    def sacar(self, valor):
-        if valor <= self.saldo:
-            self.saldo -+ valor
-            print(f"Saque de R${valor: .2f} realizado! Saldo atual: R${self.saldo: .2f}")
-        else:
-            print("ERRO: Saldo insuficiente na conta.")
+#     def sacar(self, valor):
+#         if valor <= self.saldo:
+#             self.saldo -+ valor
+#             print(f"Saque de R${valor: .2f} realizado! Saldo atual: R${self.saldo: .2f}")
+#         else:
+#             print("ERRO: Saldo insuficiente na conta.")
     
-    def mostrar_saldo(self):
-        print(f"Saldo final de{self.titular}: R${self.saldo: .2f}")
+#     def mostrar_saldo(self):
+#         print(f"Saldo final de{self.titular}: R${self.saldo: .2f}")
     
-conta = conta_bancaria("Giovani")
-conta.depositar(500)
-conta.sacar(200)
-conta.sacar(400)
-conta.mostrar_saldo()
+# conta = conta_bancaria("Giovani")
+# conta.depositar(500)
+# conta.sacar(200)
+# conta.sacar(400)
+# conta.mostrar_saldo()
+
+
+# class ContaBancaria:
+#     def __init__(self, titular, saldo):
+#         self.__titular = titular
+#         self.__saldo = saldo
+
+#      # GETTER
+#     def get_saldo(self):
+#             return self.__saldo
+#     # SETTER    
+#     def depositar(self, valor):
+#             self.__saldo += valor
+
+# conta = ContaBancaria("Giovani", 1000)
+# print(f"Seu valor em caixa: R$ {conta.get_saldo()}")
+# conta.depositar(777)
+# print(f"Seu valor em caixa após o depósito: R$ {conta.get_saldo()}")        
+
+
+# Herança ->
+# class Animal:
+#     def __init__(self, nome):
+#         self.nome = nome
+
+#         def emitir_som(self):
+#             print("som estranho")
+
+# class Cachorro(Animal):
+#     def emitir_som(self): # Sobrescreve o método.
+#         print("Au au au")
+
+# class Gato(Animal):
+#     def emitir_som(self):
+#         print("Miauuuuu")
+
+# dog = Cachorro("yuri")
+# cat = Gato("Remy")
+
+# dog.emitir_som()
+# cat.emitir_som()
+        
+# class Funcionario:
+#     def __init__(self, nome, salario):
+#         self.nome = nome
+#         self.__salario = salario
+
+#     def get_salario(self):
+#         return self.__salario
+
+#     def setar_salario(self, salario):
+#         self.__salario = salario
+
+
+# class Gerente(Funcionario):
+#     def __init__(self, nome, salario, departamento):
+#         Funcionario.__init__(self, nome, salario)
+#         self.departamento = departamento
+
+#     def mostrar_departamento(self):
+#         print(f"O gerente {self.nome} é reponse pelo departamento de {self.departamento}")
+
+
+
+# f1 = Funcionario("Giovani", 4000)
+# print(f"Seu salário é de: R$ {f1.get_salario()}")
+# f1.setar_salario(7000)
+# print(f"Seu novo salário é de: R$ {f1.get_salario()}")
+
+# # Instanciando um Gerente
+# gerente = Gerente("Amanda", 9000, "Recursos Humanos")
+# print(f"Salário da gerente: R$ {gerente.get_salario()}")
+# print(gerente.mostrar_departamento())
+
+########################################################################################################################################
+# class Produto:
+#     def __init__(self, nome, preco):
+#         self.__nome = nome
+#         self.__preco = preco
+
+#     def get_preco(self):
+#         return self.__preco
+
+#     def setar_preco(self, preco):
+#         self.__preco = preco  
+
+# p1 = Produto("Agua", 10)
+# p2 = Produto("pão", 12)
+
+
+# preco_com_desconto = p1.get_preco() * 0.9
+# preco_com_desconto2 = p2.get_preco() * 0.9
+# p1.setar_preco(preco_com_desconto)
+# p2.setar_preco(preco_com_desconto2)
+
+# print(f"O valor da agua com 10% de desconto é de: R$ {p1.get_preco():.2f}")
+# print(f"O valor do pao com 10% de desconto é de: R$ {p2.get_preco():.2f}")
+
+######################################################################################################################
+
+# class Veiculo:
+#     def __init__(self, marca, modelo, ano):
+#         self.marca = marca
+#         self.modelo = modelo
+#         self.ano = ano
+
+#     def __str__(self):
+#         return f"{self.marca} {self.modelo} ({self.ano})"
+    
+# class Carro(Veiculo):
+#     def mostrar_tipo(self):
+#         print("")
+
+# class Moto(Veiculo):
+#     def mostrar_tipo(self):
+#         print("")
+
+
+# golf = Carro("Volkswagen | ", "MK4 | ",  2007)
+# cg = Moto("CG | ", "fan | ", 2001)
+
+# golf.mostrar_tipo()
+# cg.mostrar_tipo()
+# print(f"{golf}")
+# print(f"{cg}")
+###################################################################################################################
+
+class Funcionario:
+    def trabalhar(self):
+        print("O funcionario esta trabalhando normalmente")
+
+class Estagiario(Funcionario):
+    def trabalhar(self):
+        print("O estagiario esta aprendendo")
+
+funcionario1 = Funcionario()
+estagiario1 = Estagiario()
+
+funcionario1.trabalhar()
+estagiario1.trabalhar()
