@@ -155,3 +155,11 @@ Herança = quando uma classe herda de outra classe, a classe filha ganha atribut
         Classes filhas: Cachorro e gato.
 
 Encapsulamento (com getters e setters)
+
+Abstração = é como quando vc usa o controle remoto.
+
+no codigo é = crio uma classe abstrata que define oque deve existir.
+mas n diz como funciona, isso fica para as classes "filhas"(que herdam dela)
+
+
+Polimorfismo = varias classes podem responder de jeito diferentes ao mesmo comando.

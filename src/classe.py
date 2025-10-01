@@ -22,7 +22,8 @@
 # pessoa1.fazer_aniversario()
 
 # pessoa1.apresentar()
-        
+
+##################################################################################################################################
 
 # class conta_bancaria:
 #     def __init__(self, titular):
@@ -89,7 +90,7 @@
 
 # dog.emitir_som()
 # cat.emitir_som()
-        
+##################################################################################### 
 # class Funcionario:
 #     def __init__(self, nome, salario):
 #         self.nome = nome
@@ -175,16 +176,178 @@
 # print(f"{cg}")
 ###################################################################################################################
 
-class Funcionario:
-    def trabalhar(self):
-        print("O funcionario esta trabalhando normalmente")
+# class Funcionario:
+#     def trabalhar(self):
+#         print("O funcionario esta trabalhando normalmente")
 
-class Estagiario(Funcionario):
-    def trabalhar(self):
-        print("O estagiario esta aprendendo")
+# class Estagiario(Funcionario):
+#     def trabalhar(self):
+#         print("O estagiario esta aprendendo")
 
-funcionario1 = Funcionario()
-estagiario1 = Estagiario()
+# funcionario1 = Funcionario()
+# estagiario1 = Estagiario()
 
-funcionario1.trabalhar()
-estagiario1.trabalhar()
+# funcionario1.trabalhar()
+# estagiario1.trabalhar()
+
+###################################################################################################
+
+# class ContaCorrente:
+#     def __init__(self, saldo):
+#         self.__saldo = saldo
+
+#     def depositar(self, valor):
+#         if valor > 0:
+#             self.__saldo += valor
+#             print(f"Depósito de R$ {valor} ralizado com sucesso")
+#         else:
+#             print("Valor inválido")
+
+#     def sacar(self, valor):
+#         if valor <= 0:
+#             print("Valor invalido")
+#         elif valor <= self.__saldo:
+#             self.__saldo -= valor
+#             print(f"seu saque foi concluido no valor de {valor:.2f}")
+#         else:
+#             print("saldo insuficiente!")
+
+#     def consultar_saldo(self):
+#         print(f"Saldo atual: R$ {self.__saldo}")
+
+# valor1 = ContaCorrente(100)
+# valor1.depositar(50)
+# valor1.consultar_saldo()
+# valor1.sacar(50)
+# valor1.consultar_saldo()
+
+######################################################################################################################
+
+# class Aluno:
+#     def __init__(self, nome, nota):
+#         self.__nome = nome
+#         self.__nota = nota
+    
+#     def get_nota(self):
+#         return self.__nota
+    
+#     def set_nota(self):
+#         if self.__nota > 0:
+#             print("Sua nota foi aceita!")
+#         else:
+#             print("Sua nota não foi aceita!")
+
+#     def nota_max(self):
+#         if self.__nota == 10:
+#             print("Parabéns você tirou nota máxima!!")
+
+# nota1 = Aluno("Giovani", 9)
+# nota1.get_nota()
+# nota1.set_nota()
+# nota1.nota_max()
+        
+################################################################################################################
+# class Pessoa:
+#     def __init__(self, nome, idade):
+#         self.nome = nome
+#         self.idade = idade
+    
+# class Professor(Pessoa):
+#     def __init__(self, nome, idade, materia):
+#         super().__init__(nome, idade)
+#         self.materia = materia
+
+# pessoa1 = Pessoa()
+# prof1 = Professor()
+
+###############################################################################################################
+
+# class Veiculo:
+#     def __init__(self, nome):
+#         self.nome = nome
+    
+#     def mover(self):
+#         print("Carro parado")
+
+# class Carro(Veiculo):
+#     def mover(self):
+#         print("Isso é um carro e estou dirigindo o carro!")
+
+# class Bicicleta(Veiculo):
+#     def mover(self):
+#         print("Isso é uma bike e estou pedalando!")
+
+# carro = Carro("Golf")
+# bicicleta = Bicicleta("KSW")
+
+# carro.mover()
+# bicicleta.mover()
+
+###################################################################################################################
+
+# class Usuario:
+#     def __init__(self, nome, senha):
+#         self.nome = nome
+#         self.__senha = senha
+        
+
+#     def alterar_senha(self, antiga, nova):
+#         if antiga == self.__senha:
+#             self.__senha = nova
+#             print("A senha foi alterada!")
+
+#         else:
+#             print("A senha antiga esta incorreta ")
+
+#     def login(self, senha):
+#         if senha == self.__senha:
+#             print(f"Aceso permitido. Bem vindo {self.nome}")
+#         else:
+#             print("Senha incorreta")
+
+# user = Usuario("Giovani", "124")
+# user.login("124")
+
+#########################################################################################################################
+
+# class Animal:
+#     def mover(self):
+#         print("o animal ta andando")
+
+# class Mamifero(Animal):
+#     def amamentar(self):
+#         print("ta amamentando")
+
+# class Cachorro(Mamifero):
+#     def latir(self):
+#         print("ta latindo")
+
+
+# dog = Cachorro()
+
+# dog.mover()
+# dog.amamentar()
+# dog.latir()
+
+########################################################################################################
+
+from abc import ABC, abstractclassmethod
+
+class Instrumento(ABC):
+    @abstractclassmethod
+    def tocar(self):
+        pass
+
+class Violao(Instrumento):
+    def tocar(self):
+        print("o violao esta tocadando um som")
+
+class Bateria(Instrumento):
+    def tocar(self):
+        print("a bateria esta tocando")
+
+violao = Violao()
+bateria = Bateria()
+
+violao.tocar()
+bateria.tocar()
