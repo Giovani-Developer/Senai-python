@@ -331,23 +331,123 @@
 
 ########################################################################################################
 
-from abc import ABC, abstractclassmethod
+# from abc import ABC, abstractclassmethod
 
-class Instrumento(ABC):
-    @abstractclassmethod
-    def tocar(self):
-        pass
+# class Instrumento(ABC):
+#     @abstractclassmethod
+#     def tocar(self):
+#         pass
 
-class Violao(Instrumento):
-    def tocar(self):
-        print("o violao esta tocadando um som")
+# class Violao(Instrumento):
+#     def tocar(self):
+#         print("o violao esta tocadando um som")
 
-class Bateria(Instrumento):
-    def tocar(self):
-        print("a bateria esta tocando")
+# class Bateria(Instrumento):
+#     def tocar(self):
+#         print("a bateria esta tocando")
 
-violao = Violao()
-bateria = Bateria()
+# violao = Violao()
+# bateria = Bateria()
 
-violao.tocar()
-bateria.tocar()
+# violao.tocar()
+# bateria.tocar()
+
+##############################################################################################
+
+# from abc import ABC, abstractclassmethod
+
+# class Funcionario(ABC):
+#     @abstractclassmethod
+#     def calcular_pagamento(self):
+#         pass
+
+# class Assalariado(Funcionario):
+#     def __init__(self, salario):
+#         self.salario = salario
+
+#     def calcular_pagamento(self):
+#         return self.salario
+    
+# class Horista(Funcionario):
+#     def __init__(self, valor_hora, horas_trabalhadas):
+#         self.valor_hora = valor_hora
+#         self.horas_trabalhadas = horas_trabalhadas
+
+#     def calcular_pagamento(self):
+#         return self.valor_hora * self.horas_trabalhadas
+    
+# f1 = Assalariado(3000)
+# f2 = Horista(50, 60)
+
+# f1.calcular_pagamento()
+
+
+###############################################################################################################################
+from viagem_class import viagem_class
+
+viagem_0 = viagem_class("Florida")
+viagem_1 = viagem_class("Havai")
+viagem_2 = viagem_class("Toquio")
+viagem_3 = viagem_class("Egito")
+
+print("------------------------------------------------------------------------")
+print("Bem-Vindo ! viagens senai tem ofertas pra vc")
+
+viajante = input("Digite seu nome para comerçarmos: ")
+
+print(f"{viajante} Temos 4 destinos para voce: "
+'''
+      [0] Florida
+      [1] havai
+      [2] toquio
+      [3] egito
+'''
+)
+    
+
+
+selecao = int(input("Selecione o numero da viagem desejada: "))
+lista_viagem = [viagem_0, viagem_1, viagem_2, viagem_3]
+opcao_selecionada = int(selecao)
+for opcao in lista_viagem:
+    if opcao_selecionada >= 4:
+        print("Esta opção nao esta incluida!")
+        break
+    if opcao_selecionada <= 3:
+        print(f"{viajante} sua viagem para {lista_viagem[opcao_selecionada].destino} está marcada.")
+        print("Volte sempre!")
+        break
+
+
+# from biblioteca import biblioteca
+
+# e0 = biblioteca("Seja um programador inteligente!")
+# e1 = biblioteca("POO")
+# e2 = biblioteca("Manual da programação")
+
+# print("------------------------------------------------------------")
+# print("Bem-Vindo à Biblioteca de Freitas, Giovani")
+
+# solicitante = input("Digite seu nome: ")
+
+# print(f"{solicitante} temos esses livros disponiveis para o emprestimo"
+# '''
+#     [0] Seja um programador inteligente!
+#     [1] POO
+#     [2] Manuel da programação
+# '''
+# )
+
+# selecao = int(input("Selecione o livro desejado: "))
+# lista_livros = [e0, e1, e2]
+# opcao_selecionada = int(selecao)
+# for opcao in lista_livros:
+#     if opcao_selecionada >= 4:
+#         print("Este livro nao esta disponivel")
+#     if opcao_selecionada <= 3:
+#         print(f"{solicitante} Seu livro {lista_livros[opcao_selecionada].estante} é seu durante o emprestimo!!")
+#         print("Te espero no dia da devolução!")
+#         break
+
+
+

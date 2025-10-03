@@ -1,0 +1,209 @@
+Claro! Vamos explicar passo a passo o funcionamento do programa de agenda com POO que você está criando, de forma bem didática, dividindo por arquivos e por blocos de código.
+
+📁 Arquivo: contato.py
+
+Este arquivo define as classes que representam os dados da agenda e as funcionalidades que manipulam esses dados.
+
+🔹 Classe Contato
+class Contato:
+    def __init__(self, nome, telefone, email):
+        self.nome = nome
+        self.telefone = telefone
+        self.email = email
+
+
+Contato representa um contato da agenda.
+
+O método __init__ é o construtor, usado quando criamos um novo contato.
+
+Cada contato guarda:
+
+nome (string)
+
+telefone (string)
+
+email (string)
+
+Método __str__
+    def __str__(self):
+        return f"Nome: {self.nome}, Telefone: {self.telefone}, Email: {self.email}"
+
+
+Esse método define como o objeto será exibido quando usamos print().
+
+Exemplo: print(contato) vai mostrar os dados formatados.
+
+🔹 Classe Agenda
+class Agenda:
+    def __init__(self):
+        self.contatos = []
+
+
+A classe Agenda é onde guardamos e manipulamos os contatos.
+
+self.contatos é uma lista que armazena objetos da classe Contato.
+
+Método adicionar_contato
+    def adicionar_contato(self, contato):
+        self.contatos.append(contato)
+        print("Contato adicionado com sucesso!")
+
+
+Adiciona um objeto Contato à lista contatos.
+
+Método listar_contatos
+    def listar_contatos(self):
+        if not self.contatos:
+            print("Agenda vazia.")
+        else:
+            for i, contato in enumerate(self.contatos, 1):
+                print(f"{i}. {contato}")
+
+
+Mostra todos os contatos cadastrados.
+
+Se a lista estiver vazia, avisa o usuário.
+
+Usa enumerate para numerar os contatos a partir de 1.
+
+Método editar_contato
+    def editar_contato(self, indice, novo_nome, novo_telefone, novo_email):
+        if 0 <= indice < len(self.contatos):
+            self.contatos[indice].nome = novo_nome
+            self.contatos[indice].telefone = novo_telefone
+            self.contatos[indice].email = novo_email
+            print("Contato atualizado com sucesso!")
+        else:
+            print("Índice inválido.")
+
+
+Atualiza os dados de um contato existente, usando o índice (posição na lista).
+
+Verifica se o índice é válido para evitar erro.
+
+Método deletar_contato
+    def deletar_contato(self, indice):
+        if 0 <= indice < len(self.contatos):
+            removido = self.contatos.pop(indice)
+            print(f"Contato '{removido.nome}' removido com sucesso!")
+        else:
+            print("Índice inválido.")
+
+
+Remove um contato da lista, também usando o índice.
+
+Usa pop para remover e retornar o contato, que é usado na mensagem.
+
+📄 Arquivo: main.py
+
+Esse arquivo é responsável por interagir com o usuário e usar as classes definidas em contato.py.
+
+Importação
+from contato import Contato, Agenda
+
+
+Importa as classes que você criou para poder usá-las.
+
+Função menu()
+
+É onde acontece toda a lógica de interação com o usuário no terminal.
+
+Loop principal
+while True:
+
+
+Mantém o programa rodando até o usuário escolher "sair".
+
+Exibição do menu
+print("\n----- AGENDA -----")
+print("1. Adicionar contato")
+...
+
+
+Mostra as opções disponíveis.
+
+Leitura da escolha do usuário
+escolha = input("Escolha uma opção: ")
+
+
+Lê a opção como string. Por isso todas as comparações abaixo são feitas com "1", "2", etc.
+
+Opção 1 – Adicionar contato
+if escolha == "1":
+    nome = input("Nome: ")
+    telefone = input("Telefone: ")
+    email = input("Email: ")
+    contato = Contato(nome, telefone, email)
+    agenda.adicionar_contato(contato)
+
+
+Lê os dados do usuário.
+
+Cria um objeto Contato.
+
+Adiciona na agenda com adicionar_contato.
+
+Opção 2 – Listar contatos
+elif escolha == "2":
+    agenda.listar_contatos()
+
+
+Chama o método para exibir os contatos salvos.
+
+Opção 3 – Editar contato
+elif escolha == "3":
+    agenda.listar_contatos()
+    try:
+        indice = int(input("Número do contato para editar: ")) - 1
+        nome = input("Novo nome: ")
+        telefone = input("Novo telefone: ")
+        email = input("Novo email: ")
+        agenda.editar_contato(indice, nome, telefone, email)
+    except ValueError:
+        print("Entrada inválida!")
+
+
+Lista os contatos para o usuário escolher.
+
+Lê o número do contato, subtrai 1 (porque listas começam do 0).
+
+Atualiza os dados usando editar_contato.
+
+Opção 4 – Deletar contato
+elif escolha == "4":
+    agenda.listar_contatos()
+    try:
+        indice = int(input("Número do contato para deletar: ")) - 1
+        agenda.deletar_contato(indice)
+    except ValueError:
+        print("Entrada inválida!")
+
+
+Semelhante à edição.
+
+Lê o índice e remove o contato usando deletar_contato.
+
+Opção 5 – Sair
+elif escolha == "5":
+    print("Saindo da agenda...")
+    break
+
+
+Encerra o programa com break.
+
+Verificação final
+if __name__ == "__main__":
+    menu()
+
+
+Garante que o menu só seja executado se o main.py for rodado diretamente.
+
+Evita execução acidental se você importar esse arquivo em outro projeto.
+
+✅ Resumo geral
+Parte	Função
+Contato	Representa uma pessoa na agenda
+Agenda	Armazena e manipula os contatos
+main.py	Interface com o usuário (menu e inputs)
+input()	Lê dados digitados pelo usuário
+if __name__ == "__main__"	Ponto de entrada do programa
