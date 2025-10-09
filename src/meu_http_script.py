@@ -162,24 +162,91 @@
 
 ######################################################################################################################################
 
+# import requests
+
+
+# def exibir_resposta(metodo, resposta): # parametros passados a funcao para exbir cada metodo.
+#     print(f"\n === {metodo}===")
+#     print(f"Status code: {resposta.status_code}")
+#     print(f"URL: {resposta.url}")
+#     print(f"Conteudo: {resposta.json()}")
+
+# def requisicao_get():# passei os paramns e dou um get neles.
+#     params = {
+#         "Nome": "Giovani",
+#         "Cidade": "Mogi Guaçu",
+#         "Idade": 17
+#     }
+#     resposta = requests.get("https://httpbin.org/get", params=params)
+#     exibir_resposta("GET", resposta)
+
+# def requisicao_post(): # chamo o metodo POST e mudo todos os parametros.
+#     dados = {"nome": "Giovani", "cidade": "Campinas", "idade": 17}
+#     resposta = requests.post("https://httpbin.org/post", json=dados)
+#     exibir_resposta("POST", resposta)
+
+# def requisicao_put():# metodo PUT altero todos dados.
+#     dados = {"nome": "Giovani", "cidade": "Mogi Mirim", "idade": 18}
+#     resposta = requests.put("https://httpbin.org/put", json=dados)
+#     exibir_resposta("PUT", resposta)
+
+# def requisicao_delete():# metodo DELETE deleto todos os dados.
+#     dados = {"user_id": 123}
+#     resposta = requests.delete("https://httpbin.org/delete", json=dados)
+#     exibir_resposta("DELETE", resposta)
+
+# if __name__ == "__main__":
+#     requisicao_get()
+#     requisicao_post()
+#     requisicao_put()
+#     requisicao_delete()
+
+################################################################################################
+
+# import requests
+
+# resposta = requests.get("https://swapi.dev/api/people/1/")
+
+# if resposta.status_code == 200:
+#     try:
+#         dados = resposta.json()
+#         print("===GET===")
+#         print("Nome:", dados["name"])
+#         print("Cor do cabelo: ", dados["hair_color"])
+#         print("Cor dos olhos: ", dados["eye_color"])
+#     except ValueError:
+#         print("Erro: A resposta não é JSON.")
+#         print("Conteúdo da resposta:", resposta.text)
+# else:
+#     print(" Erro HTTP:", resposta.status_code)
+
+# url = "https://pokeapi.co/api/v2/pokemon/pikachu"
+
+# response = requests.get(url)
+
+# if response.status_code == 200:
+#     try:
+#         dados1 = response.json()
+#         print("=== GET ===")
+#         print("Nome", dados1["name"])
+#         print("URL:", dados1["url"])
+#     except ValueError:
+#         print("Erro: a resposta não é JSON")
+#         print("Conteúdo da resposta: ", response.text)
+# else:
+#     print("Erro HTTP: ", response.status_code)
+
 import requests
 
+url = "https://httpbin.org/headers"
 
-def exibir_resposta(metodo, resposta):
-    print(f"\n === {metodo}===")
-    print(f"Status code: {resposta.status_code}")
-    print(f"URL: {resposta.url}")
-    print(f"Conteudo: {resposta.json()}")
+headers = {
+    "User-Agent": "CursoBackEndPython/1.0 (Aluno: Giovani; +https://capitalapex.com.br)"
 
-def requisicao_get():
-    params = {
-        "Nome": "Giovani",
-        "Cidade": "Mogi Guaçu",
-        "Idade": 17
-    }
-    resposta = requests.get("https://httpbin.org/get", params=params)
-    exibir_resposta("GET", resposta)
+}
 
+response = requests.get(url, headers=headers)
 
-
-
+print("Status code:", response.status_code)
+print("\nCabeçalhos recebidos pelo servidor: ")
+print(response.json()["headers"])

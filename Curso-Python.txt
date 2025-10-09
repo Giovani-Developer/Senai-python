@@ -163,3 +163,16 @@ mas n diz como funciona, isso fica para as classes "filhas"(que herdam dela)
 
 
 Polimorfismo = varias classes podem responder de jeito diferentes ao mesmo comando.
+
+##########################################################################################################
+
+Tipos de passagem de parametros em HTTP
+
+1- Query parameters envia pela url, metodo mais comum GET 
+
+2- Body parameter envia pelo corpo da requisição, metodos: POST, PUT e PATCH, ex: enviados em formatos JSON
+
+3- Headers infos adicionais, envia pelo cabealho do HTTP, metodos: Todos.
+
+###########################################################################################################
+
