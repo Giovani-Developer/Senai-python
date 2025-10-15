@@ -236,17 +236,34 @@
 # else:
 #     print("Erro HTTP: ", response.status_code)
 
-import requests
+# import requests
 
-url = "https://httpbin.org/headers"
+# url = "https://httpbin.org/headers"
 
-headers = {
-    "User-Agent": "CursoBackEndPython/1.0 (Aluno: Giovani; +https://capitalapex.com.br)"
+# headers = {
+#     "User-Agent": "CursoBackEndPython/1.0 (Aluno: Giovani; +https://capitalapex.com.br)"
 
-}
+# }
 
-response = requests.get(url, headers=headers)
+# response = requests.get(url, headers=headers)
 
-print("Status code:", response.status_code)
-print("\nCabeçalhos recebidos pelo servidor: ")
-print(response.json()["headers"])
+# print("Status code:", response.status_code)
+# print("\nCabeçalhos recebidos pelo servidor: ")
+# print(response.json()["headers"])
+
+#######################################################################################################
+
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    tarefas = [
+        {"titulo": "Estudar flask", "concluida": True},
+        {"titulo": "Criar APIs", "concluida": False}
+    ]
+    return render_template ("index.html", tarefas=tarefas)
+
+if __name__ == '__main__':
+    app.run(debug=True)

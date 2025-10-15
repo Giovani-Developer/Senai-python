@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Lista de Tarefas{% endblock %}
+
+{% block conteudo %}
+  <h1>Minhas Tarefas</h1>
+  <ul>
+    {% for tarefa in tarefas %}
+      <li>{{ tarefa.titulo }} - {% if tarefa.concluida %}✅{% else %}❌{% endif %}</li>
+    {% else %}
+      <li>Nenhuma tarefa encontrada.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
