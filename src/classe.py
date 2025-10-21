@@ -383,40 +383,40 @@
 
 
 ###############################################################################################################################
-from viagem_class import viagem_class
+# from viagem_class import viagem_class
 
-viagem_0 = viagem_class("Florida")
-viagem_1 = viagem_class("Havai")
-viagem_2 = viagem_class("Toquio")
-viagem_3 = viagem_class("Egito")
+# viagem_0 = viagem_class("Florida")
+# viagem_1 = viagem_class("Havai")
+# viagem_2 = viagem_class("Toquio")
+# viagem_3 = viagem_class("Egito")
 
-print("------------------------------------------------------------------------")
-print("Bem-Vindo ! viagens senai tem ofertas pra vc")
+# print("------------------------------------------------------------------------")
+# print("Bem-Vindo ! viagens senai tem ofertas pra vc")
 
-viajante = input("Digite seu nome para comerçarmos: ")
+# viajante = input("Digite seu nome para comerçarmos: ")
 
-print(f"{viajante} Temos 4 destinos para voce: "
-'''
-      [0] Florida
-      [1] havai
-      [2] toquio
-      [3] egito
-'''
-)
+# print(f"{viajante} Temos 4 destinos para voce: "
+# '''
+#       [0] Florida
+#       [1] havai
+#       [2] toquio
+#       [3] egito
+# '''
+# )
     
 
 
-selecao = int(input("Selecione o numero da viagem desejada: "))
-lista_viagem = [viagem_0, viagem_1, viagem_2, viagem_3]
-opcao_selecionada = int(selecao)
-for opcao in lista_viagem:
-    if opcao_selecionada >= 4:
-        print("Esta opção nao esta incluida!")
-        break
-    if opcao_selecionada <= 3:
-        print(f"{viajante} sua viagem para {lista_viagem[opcao_selecionada].destino} está marcada.")
-        print("Volte sempre!")
-        break
+# selecao = int(input("Selecione o numero da viagem desejada: "))
+# lista_viagem = [viagem_0, viagem_1, viagem_2, viagem_3]
+# opcao_selecionada = int(selecao)
+# for opcao in lista_viagem:
+#     if opcao_selecionada >= 4:
+#         print("Esta opção nao esta incluida!")
+#         break
+#     if opcao_selecionada <= 3:
+#         print(f"{viajante} sua viagem para {lista_viagem[opcao_selecionada].destino} está marcada.")
+#         print("Volte sempre!")
+#         break
 
 
 # from biblioteca import biblioteca
@@ -451,3 +451,76 @@ for opcao in lista_viagem:
 
 
 
+#####################################################################################################################################
+
+# exemplo com o construtor Dataclass
+
+# from dataclasses import dataclass
+
+# @dataclass
+# class Produto:
+#     nome: str
+#     preco: float
+#     estoque: int = 0
+
+# p1 = Produto("Caneta", 2.50, 10)
+# p2 = Produto("Caneta", 2.50, 10)
+
+# print(p1)
+# print(p1 == p2)
+
+
+############################################################################################################################
+# import sqlite3
+
+# conexao = sqlite3.connect('meubanco.db')
+
+# cursor = conexao.cursor()
+
+
+# cursor.execute('''
+# CREATE TABLE IF NOT EXISTS usuarios (
+#     id INTEGER PRIMARY KEY AUTOINCREMENT,
+#     nome TEXT NOT NULL,
+#     email TEXT UNIQUE NOT NULL
+# )  
+#  ''')
+
+# cursor.execute('INSERT INTO usuarios (nome, email) VALUES (?, ?)', ("Giovani", 'giovanif@email.com'))
+
+# conexao.commit()
+# conexao.close()
+
+# print("Banco criado e usuário inserido com sucesso!")
+
+###################################################################################################################################
+import sqlite3
+
+conexao = sqlite3.connect('loja.db')
+
+cursor = conexao.cursor()
+
+cursor.execute('''
+CREATE TABLE IF NOT EXISTS produtos (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome  TEXT NOT NULL,
+    preco INTEGER NOT NULL,
+    estoque INTEGER NOT NULL
+)
+''')
+
+produto = [
+    ("Agua", 10, 10),
+    ("pao", 10, 2),
+    ("Bolo", 10, 5)
+
+]
+
+cursor.executemany('INSERT INTO produtos (nome, preco, estoque) VALUES (?,?,?)',produto )
+
+
+conexao.commit()
+conexao.close()
+
+print("Banco criado com sucesso!")
+print(produto)
