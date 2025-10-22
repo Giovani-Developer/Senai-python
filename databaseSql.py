@@ -118,11 +118,7 @@ def criar_tabela():
         # alterar um valor específico da tabela    
                     
 ''')
-
-
-
-
-
+        
         conexao.commit()
         print("Tabela 'loja_virtual' criada com sucesso!")
 
@@ -157,53 +153,3 @@ criar_tabela()
 conectar()
 
 
-########################################################################3
-# import psycopg2
-
-# conexao = psycopg2.connect(
-#     dbname="postgres",
-#     user="postgres",
-#     password="senaisp",
-#     host="localhost",
-#     port="5432"
-# )
-# conexao.autocommit = True
-# cursor = conexao.cursor()
-
-# cursor.execute("CREATE DATABASE loja_virtual")
-
-# cursor.close()
-# conexao.close()
-# print("Banco criado com sucesso!")
-
-#################################################################
-# import psycopg2
-
-# try:
-#     conexao = psycopg2.connect(
-#         dbname="loja_virtual",
-#         user="postgres",
-#         password="senaisp",
-#         host="localhost",
-#         port="5432"
-#     )
-#     cursor = conexao.cursor()
-
-#     cursor.execute('''
-#         CREATE TABLE IF NOT EXISTS loja_virtual (
-#             id SERIAL PRIMARY KEY,
-#             nome VARCHAR(80) NOT NULL,
-#             email VARCHAR(120) UNIQUE,
-#             telefone VARCHAR(20),
-#             data_cadastro DATE DEFAULT CURRENT_DATE
-#         );
-#     ''')
-
-#     conexao.commit()
-#     cursor.close()
-#     conexao.close()
-
-#     print("✅ Tabela 'loja_virtual' criada (ou já existente).")
-
-# except Exception as e:
-#     print("Erro ao criar tabela:", e)
