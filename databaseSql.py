@@ -98,7 +98,7 @@ def criar_tabela():
         )
         cursor = conexao.cursor()
 
-        # Cria a tabela se não existir
+        
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS loja_virtual (
                 id SERIAL PRIMARY KEY,

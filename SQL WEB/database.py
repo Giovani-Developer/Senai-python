@@ -1,6 +1,7 @@
 import psycopg2
 from psycopg2 import OperationalError
 
+
 def conectar():
     try:
         conexao = psycopg2.connect(
